@@ -1,0 +1,27 @@
+.TH sldc 1
+.SH NAME
+sldc \- compress or decompress data
+.SH SYNOPSIS
+.B sldc
+[\fB\-h\fR]
+[\fB\-v\fR]
+[\fB\-c\fR]
+[\fB\-d\fR]
+.SH DESCRIPTION
+.B sldc
+compress or decompress data.
+.SH OPTIONS
+.TP
+.BR \-h
+show help
+.TP
+.BR \-v
+show version
+.TP
+.BR \-c
+compress data
+.TP
+.BR \-d
+decompress data
+.SH EXAMPLES
+[ "$(echo 'test string' | ./sldc -c | ./sldc -d)" = "test string" ]

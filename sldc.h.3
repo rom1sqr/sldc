@@ -1,0 +1,8 @@
+.TH sldc.h 3
+.SH NAME
+sldc.h \- compress or decompress data C header
+.SH DESCRIPTION
+.nf
+.B const guint32 sldc_version;
+.B guchar* sldc_compress(guchar* buffer, gsize len, gsize* outlen);
+.B guchar* sldc_decompress(guchar* buffer, gsize len, gsize* outlen);

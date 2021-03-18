@@ -1,0 +1,10 @@
+includedir=/usr/include
+libdir=/usr/lib
+
+Name: libsldc
+URL: https://github.com/rom1sqr/sldc
+Description: SLDC decoder library
+Version: 1.0.0
+Cflags: -I${includedir}
+Libs: -L${libdir} -lsldc
+
