@@ -29,14 +29,15 @@ clean:
 	rm -rf __pycache__ sldc *.so *.py *.gz *_wrap.c
 install: build
 	mkdir -p /usr/include/sldc /usr/share/licenses/sldc
-	cp sldc        /usr/bin
-	cp sldc.h      /usr/include/sldc
-	cp libsldc.so  /usr/lib/libsldc.so.$(VERSION)
-	ln -sf         /usr/lib/libsldc.so.$(VERSION) /usr/lib/libsldc.so
-	cp libsldc.pc  /usr/lib/pkgconfig
-	cp LICENSE     /usr/share/licenses/sldc
-	cp sldc.1.gz   /usr/share/man/man1
-	cp sldc.h.3.gz /usr/share/man/man3
+	cp sldc             /usr/bin
+	cp sldc.h           /usr/include/sldc
+	cp libsldc.so       /usr/lib/libsldc.so.$(VERSION)
+	ln -sf              /usr/lib/libsldc.so.$(VERSION) /usr/lib/libsldc.so
+	cp libsldc.pc       /usr/lib/pkgconfig
+	cp LICENSE          /usr/share/licenses/sldc
+	cp sldc.1.gz        /usr/share/man/man1
+	cp sldc.h.3.gz      /usr/share/man/man3
+	cp sldc.py _sldc.so /usr/lib/python3.9/site-packages
 uninstall:
 	rm     /usr/bin/sldc
 	rm -rf /usr/include/sldc
@@ -45,4 +46,6 @@ uninstall:
 	rm -rf /usr/share/licenses/sldc
 	rm     /usr/share/man/man1/sldc*
 	rm     /usr/share/man/man3/sldc*
+	rm     /usr/lib/python3.9/site-packages/sldc.py
+	rm     /usr/lib/python3.9/site-packages/_sldc.so
 

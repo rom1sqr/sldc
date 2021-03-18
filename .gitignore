@@ -1,0 +1,6 @@
+sldc
+*.so
+*.py
+*.gz
+*_wrap.c
+__pycache__
